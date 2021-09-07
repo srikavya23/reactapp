@@ -24,6 +24,7 @@ jobs:
       run: |
         npm i
         npm audit fix -- force
+        npm run build
         npm start
         npm test
         
