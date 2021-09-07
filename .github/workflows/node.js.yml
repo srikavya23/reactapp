@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
     - name: npm install, build and test
       run: |
         npm install
@@ -33,11 +34,17 @@ jobs:
         npm start
         npm test
     
-    - name: Build and push Docker Image
-      uses: actions/docker-build-push@v4
+        
+    - name: Login to DockerHub
+      uses: docker/login-action@v1
       with:
-        image: srikavyapendiala/frontend
-        registry: docker.io
-        username: srikavyapendiala
-        password: Unique123_
+         username: ${{ secrets.DOCKERHUB_USERNAME }}
+         password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+         context: .
+         push: true
+         tags: srikavyapendiala/frontend:v1
         
