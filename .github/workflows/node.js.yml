@@ -24,9 +24,7 @@ jobs:
     - name: npm install, build and test
       run: |
         npm i
-        cd frontend
-        npm i
-        npm audit fix
+        npm audit fix -- force
         npm start
         npm test
         
