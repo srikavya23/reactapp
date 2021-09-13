@@ -17,6 +17,7 @@ spec:
         - name: react
           image: srikavyapendiala/frontend
           imagePullPolicy: Always
+          stdin: true
           ports:
             - containerPort: 3000
       restartPolicy: Always   
