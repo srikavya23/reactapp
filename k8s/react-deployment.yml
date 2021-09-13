@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: react
   labels:
-    app: frontend
+    app: react
 spec:
   selector:
     matchLabels:
-      app: frontend
+      app: react
   template:
     metadata:
       labels:
-        app: frontend
+        app: react
     spec:
       containers:
-        - name: frontend
+        - name: react
           image: srikavyapendiala/frontend
           imagePullPolicy: Always
           ports:
