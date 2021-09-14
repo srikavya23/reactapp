@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend
+  name: backend-servicefile
 spec:
   type: ClusterIP
   selector:
     component: backend
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 8000
      
