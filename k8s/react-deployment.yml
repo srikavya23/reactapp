@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: react
-          image: srikavyapendiala/frontend:v1
+          image: srikavyapendiala/frontend:latest
           imagePullPolicy: Always
           stdin: true
           ports:
