@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: backend
-          image: srikavyapendiala/backend:v1
+          image: srikavyapendiala/backend:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           env:
             - name: PGUSER
               value: postgres
@@ -26,8 +26,8 @@ spec:
               value: "5432"
             - name: PGDATABASE
               value: loizenaidb
-            - name: PASSWORD
+            - name: PGPASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: password
-                  key: PASSWORD
+                  name: pgpassword
+                  key: PGPASSWORD
