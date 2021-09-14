@@ -12,9 +12,9 @@ spec:
         paths:
           - path: /?(.*)
             pathType: Prefix
-            backend:
+            react:
               service:
-                name: frontend
+                name: react
                 port:
                   number: 3000
           - path: /api/?(.*)
