@@ -21,7 +21,6 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://backend-service:8080",
-  "secure": false,
   "eslintConfig": {
     "extends": "react-app"
   },
