@@ -15,7 +15,7 @@ services:
       database: loizenaidb
       username: postgres
       password: 123
-      host: postgres
+      host: postgres-service
       dialect: postgres
     ports:
         - "8080:8080"
