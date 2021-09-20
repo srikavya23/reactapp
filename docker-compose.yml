@@ -25,7 +25,7 @@ services:
       BACKEND_USER: postgres
       BACKEND_PASS: 123
       BACKEND_HOST: postgres
-      BACKEND_DIALECT: postgres
+    
 
   frontend:
     image: srikavyapendiala/frontend
