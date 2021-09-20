@@ -13,7 +13,7 @@ services:
       POSTGRES_DB: loizenaidb
  
   backend:
-    build: ./root/backend
+    build: ./Dokerfile
     container_name: backend
     ports:
       - "8080:8080"
@@ -28,7 +28,7 @@ services:
     
 
   frontend:
-    build: ./root/reactjs
+    build: ./Dockerfile
     container_name: frontend
     stdin_open: true
     environment:
