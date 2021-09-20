@@ -13,7 +13,7 @@ services:
       POSTGRES_DB: loizenaidb
  
   backend:
-    image: srikavyapendiala/backend
+    image: srikavyapendiala/backend:v1
     container_name: backend
     ports:
       - "8080:8080"
@@ -28,7 +28,7 @@ services:
     
 
   frontend:
-    image: srikavyapendiala/frontend
+    image: srikavyapendiala/frontend:v1
     container_name: frontend
     stdin_open: true
     environment:
