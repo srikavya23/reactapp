@@ -27,6 +27,8 @@ services:
           image: srikavyapendiala/frontend:latest
           container_name: frontend
           stdin_open: true
+          environment: 
+            - backend=localhost
           ports:
                 - "3000:3000"
           depends_on:
