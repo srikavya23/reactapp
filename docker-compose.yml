@@ -28,6 +28,7 @@ services:
     
 
   frontend:
+    build: ./frontend
     container_name: frontend
     stdin_open: true
     environment:
