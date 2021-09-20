@@ -2,7 +2,7 @@ version: "3.3"
 services:
 
   postgres:
-    image: postgres:v1
+    image: postgres:latest
     container_name: postgres
     ports:
       - "5432:5432"
@@ -13,7 +13,7 @@ services:
       POSTGRES_DB: loizenaidb
  
   backend:
-    image: srikavyapendiala/backend:v1
+    image: srikavyapendiala/backend
     container_name: backend
     ports:
       - "8080:8080"
@@ -28,7 +28,7 @@ services:
     
 
   frontend:
-    image: srikavyapendiala/frontend:v1
+    image: srikavyapendiala/frontend
     container_name: frontend
     stdin_open: true
     environment:
