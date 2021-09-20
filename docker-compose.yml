@@ -28,7 +28,7 @@ services:
     
 
   frontend:
-    build: ./react
+    build: ./reactjs
     container_name: frontend
     stdin_open: true
     environment:
