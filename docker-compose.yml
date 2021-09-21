@@ -2,7 +2,6 @@ version: "3.3"
 services:
 
   postgres:
-    build: ./
     image: postgres:latest
     container_name: postgres
     ports:
@@ -22,11 +21,12 @@ services:
     depends_on:
       - postgres
     environment:
-      BACKEND_DATA: loizenaidb
-      BACKEND_USER: postgres
-      BACKEND_PASS: 123
-      BACKEND_HOST: postgres
-    
+      - PGDATABASE=loizenaidb
+      - PGUSER=postgres
+      - PGPASS=123
+      - PGHOST=postgres
+      - PGDIALECT=postgres
+
 
   frontend:
     build: ./
